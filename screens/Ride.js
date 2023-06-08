@@ -151,7 +151,7 @@ export default class RideScreen extends Component {
       bikeRef.docs.map(doc => {
         if (!doc.data().under_maintenance) {
 
-          transactionType === doc.data().is_bike_available ? "rented" : "return";
+          transactionType = doc.data().is_bike_available ? "rented" : "return";
 
         } else {
           transactionType = "under_maintenance";
